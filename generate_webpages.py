@@ -50,7 +50,7 @@ div.WordSection1
 def make_image(image_file_string):
     return '''
 <div style="text-align: center;">
-<img src="../pictures_namefiles/{}" width="1000" style="display: block; margin-right: auto; margin-left: auto;">
+<img src="../pictures_namefiles/{}" width="2000" style="display: block; margin-right: auto; margin-left: auto;">
 </div>
 '''.format(image_file_string)
 
