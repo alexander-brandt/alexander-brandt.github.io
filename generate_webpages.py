@@ -49,28 +49,11 @@ div.WordSection1
 
 def make_image(image_file_string):
     return '''
-<head>
-    <style>
-        * {{
-            margin: 0;
-            padding: 0;
-        }}
-        .imgbox {{
-            display: grid;
-            height: 100%;
-        }}
-        .center-fit {{
-            max-width: 100%;
-            max-height: 100vh;
-            margin: auto;
-        }}
-    </style>
-</head>
-<body>
-<div class="imgbox">
-    <img class="center-fit" src='../pictures_namefiles/{}'>
+<div style="text-align: center;">
+<img src="../pictures_namefiles/{}" width="1000" style="display: block; margin-right: auto; margin-left: auto;">
 </div>
-</body>'''.format(image_file_string)
+
+'''.format(image_file_string)
 
 middle = '''
 <div style="text-align: left;" class=WordSection1>
@@ -80,11 +63,11 @@ def make_block(paragraph):
 
     if paragraph == "\n":
         return '''<p class=MsoNormal align=center style='text-align:center'><b><span
-style='font-size:50.0pt;line-height:107%;font-family:"Garamond",serif;
+style='font-size:28.0pt;line-height:107%;font-family:"Garamond",serif;
 color:#FFF2CC'>&nbsp;</span></b></p>\n\n'''
 
     return '''
-    <p class=MsoNormal><b><span style='font-size:50.0pt;line-height:107%;
+    <p class=MsoNormal><b><span style='font-size:28.0pt;line-height:107%;
 font-family:"Garamond",serif;color:#FFF2CC'>{}</span></b></p>
 '''.format(paragraph)
 
