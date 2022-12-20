@@ -50,7 +50,7 @@ div.WordSection1
 def make_image(image_file_string):
     return '''
 <div style="text-align: center;">
-<img src="../pictures_namefiles/{}" width="500" style="display: block; margin-right: auto; margin-left: auto;">
+<img src="../pictures_namefiles/{}" width="1000" style="display: block; margin-right: auto; margin-left: auto;">
 </div>
 '''.format(image_file_string)
 
@@ -94,6 +94,7 @@ for line in open("Website_Names_Master.tsv"):
             web_file.write(make_image(tokens[6]) + "\n")
             web_file.write(make_block("\n"))
         for note_paragraph in open("./notes_namefiles/" + tokens[5], encoding='utf-8'):
+            print(note_paragraph)
             web_file.write(make_block(note_paragraph))
         web_file.write(end)
         web_file.close()
