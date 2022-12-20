@@ -93,7 +93,7 @@ for line in open("Website_Names_Master.tsv"):
             print(tokens[6] + " - exists!")
             web_file.write(make_image(tokens[6]) + "\n")
             web_file.write(make_block("\n"))
-        for note_paragraph in open("./notes_namefiles/" + tokens[5]):
+        for note_paragraph in open("./notes_namefiles/" + tokens[5], encoding='utf-8'):
             web_file.write(make_block(note_paragraph))
         web_file.write(end)
         web_file.close()
