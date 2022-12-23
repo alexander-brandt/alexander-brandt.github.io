@@ -69,7 +69,7 @@ color:#FFF2CC'>&nbsp;</span></b></p>\n\n'''
     return '''
     <p class=MsoNormal><b><span style='font-size:45.0pt;line-height:107%;
 font-family:"Garamond",serif;color:#FFF2CC'>{}</span></b></p>
-'''.format(paragraph)
+'''.format(paragraph.replace('"', '&quot').replace('“', '&quot').replace('”', '&quot').replace("'", '\''))
 
 end = '''
 </div>
